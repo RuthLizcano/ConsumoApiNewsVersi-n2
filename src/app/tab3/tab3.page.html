@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Negocios
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngFor="let item of newsList3">
+    <ion-card >
+      <img 
+      [src]="item.urlToImage" 
+      alt=""
+      />
+      <ion-card-header>
+        <ion-card-subtitle>{{item.author}}</ion-card-subtitle>
+        <ion-card-header id="titulo">{{item.title}}</ion-card-header>
+        
+        
+        
+      </ion-card-header>
+      <ion-card-content>{{item.description}}
+        <app-heart-fav (click)="addFav(item)"> </app-heart-fav>
+      </ion-card-content>
+      
+  
+  
+    </ion-card>
+  </div>
+
+</ion-content>
